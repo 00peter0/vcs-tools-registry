@@ -1,0 +1,151 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-03-25",
+  "tools": [
+    {
+      "key": "ttyd",
+      "label": "Terminal",
+      "description": "Linux terminal in the browser",
+      "icon": "terminal",
+      "version": "1.7.4",
+      "port": 7681,
+      "pathPrefix": "/ttyd",
+      "stripPrefix": true,
+      "systemd": "ttyd",
+      "category": "development"
+    },
+    {
+      "key": "filebrowser",
+      "label": "File Manager",
+      "description": "Web-based file manager",
+      "icon": "folder",
+      "version": "2.27",
+      "port": 8085,
+      "pathPrefix": "/files",
+      "stripPrefix": false,
+      "systemd": "filebrowser",
+      "category": "development"
+    },
+    {
+      "key": "jupyter",
+      "label": "Jupyter Notebook",
+      "description": "Interactive Python notebooks for data science",
+      "icon": "book",
+      "version": "4.1",
+      "port": 8888,
+      "pathPrefix": "/jupyter",
+      "stripPrefix": false,
+      "systemd": "vcs-cc-jupyter",
+      "category": "development"
+    },
+    {
+      "key": "gitea",
+      "label": "Git Server",
+      "description": "Self-hosted Git service",
+      "icon": "git-branch",
+      "version": "1.22",
+      "port": 3300,
+      "pathPrefix": "/git",
+      "stripPrefix": true,
+      "systemd": "vcs-cc-gitea",
+      "category": "development"
+    },
+    {
+      "key": "pgweb",
+      "label": "Database Admin",
+      "description": "PostgreSQL web interface",
+      "icon": "database",
+      "version": "latest",
+      "port": 5437,
+      "pathPrefix": "/pgweb",
+      "stripPrefix": true,
+      "systemd": "pgweb",
+      "category": "database"
+    },
+    {
+      "key": "glances",
+      "label": "Monitoring",
+      "description": "System monitoring dashboard",
+      "icon": "activity",
+      "version": "4.x",
+      "port": 61208,
+      "pathPrefix": "/glances",
+      "stripPrefix": true,
+      "systemd": "glances",
+      "category": "monitoring"
+    },
+    {
+      "key": "claude-cli",
+      "label": "Claude Code",
+      "description": "AI coding assistant agent",
+      "icon": "bot",
+      "version": "latest",
+      "port": 7682,
+      "pathPrefix": "/claude",
+      "stripPrefix": true,
+      "systemd": "vcs-cc-claude",
+      "category": "ai"
+    },
+    {
+      "key": "browserless",
+      "label": "Web Browser",
+      "description": "Firefox browser in the cloud",
+      "icon": "globe",
+      "version": "latest",
+      "port": 3200,
+      "pathPrefix": "/browser",
+      "stripPrefix": true,
+      "systemd": "vcs-cc-browser",
+      "category": "development"
+    },
+    {
+      "key": "portainer",
+      "label": "Docker Manager",
+      "description": "Docker container management UI",
+      "icon": "box",
+      "version": "2.21.0",
+      "port": 9443,
+      "pathPrefix": "/portainer",
+      "stripPrefix": true,
+      "systemd": "vcs-cc-portainer",
+      "category": "infrastructure"
+    },
+    {
+      "key": "comfyui",
+      "label": "ComfyUI",
+      "description": "AI image generation workflow editor",
+      "icon": "image",
+      "version": "latest",
+      "port": 8188,
+      "pathPrefix": "/comfyui",
+      "stripPrefix": true,
+      "systemd": "vcs-cc-comfyui",
+      "category": "ai"
+    },
+    {
+      "key": "wan2",
+      "label": "Wan2.1",
+      "description": "AI video generation",
+      "icon": "video",
+      "version": "latest",
+      "port": 7860,
+      "pathPrefix": "/wan2",
+      "stripPrefix": true,
+      "systemd": "vcs-cc-wan2",
+      "category": "ai"
+    },
+    {
+      "key": "container-guard",
+      "label": "Container Guard",
+      "description": "Docker container security scanner & manager",
+      "icon": "shield",
+      "version": "1.0.0",
+      "port": 4000,
+      "pathPrefix": "/guard",
+      "stripPrefix": true,
+      "systemd": ["container-guard-api", "container-guard-ui"],
+      "category": "security",
+      "source": "github:00peter0/vcs-container-guard"
+    }
+  ]
+}
