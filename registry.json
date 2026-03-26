@@ -169,7 +169,7 @@
       "stripPrefix": false,
       "systemd": "vcs-container-guard-ui",
       "category": "security",
-      "source": "github:00peter0/vcs-container-guard"
+      "source": "github:00peter0/vcs-container-guard",
     }
     {
   "key": "metabase",
