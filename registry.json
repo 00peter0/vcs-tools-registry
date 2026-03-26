@@ -1,6 +1,6 @@
 {
-  "version": "1.0.0",
-  "updated": "2026-03-25",
+  "version": "1.0.1",
+  "updated": "2026-03-26",
   "tools": [
     {
       "key": "ttyd",
@@ -135,6 +135,30 @@
       "category": "ai"
     },
     {
+      "key": "ollama",
+      "label": "Ollama API",
+      "description": "Local LLM inference server",
+      "icon": "cpu",
+      "version": "latest",
+      "port": 11434,
+      "pathPrefix": "/ollama",
+      "stripPrefix": true,
+      "systemd": "ollama",
+      "category": "ai"
+    },
+    {
+      "key": "open-webui",
+      "label": "AI Chat",
+      "description": "Web UI for local and cloud AI models",
+      "icon": "message-circle",
+      "version": "latest",
+      "port": 8080,
+      "pathPrefix": "/ai",
+      "stripPrefix": true,
+      "systemd": "vcs-cc-openwebui",
+      "category": "ai"
+    },
+    {
       "key": "container-guard",
       "label": "Container Guard",
       "description": "Docker container security scanner & manager",
@@ -142,8 +166,8 @@
       "version": "1.0.0",
       "port": 4000,
       "pathPrefix": "/guard",
-      "stripPrefix": true,
-      "systemd": ["container-guard-api", "container-guard-ui"],
+      "stripPrefix": false,
+      "systemd": "vcs-container-guard-ui",
       "category": "security",
       "source": "github:00peter0/vcs-container-guard"
     }
