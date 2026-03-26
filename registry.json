@@ -1,5 +1,5 @@
 {
-  "version": "1.0.2",
+  "version": "1.0.3",
   "updated": "2026-03-26",
   "tools": [
     {
@@ -12,7 +12,16 @@
       "pathPrefix": "/ttyd",
       "stripPrefix": true,
       "systemd": "ttyd",
-      "category": "development"
+      "category": "development",
+      "healthPath": "/",
+      "startupTime": 5,
+      "minRam": 64,
+      "minCores": 1,
+      "diskSpace": 10,
+      "requires": [],
+      "needsRoot": false,
+      "privilegedDocker": false,
+      "autoUpdateSupported": true
     },
     {
       "key": "filebrowser",
@@ -24,7 +33,16 @@
       "pathPrefix": "/files",
       "stripPrefix": false,
       "systemd": "filebrowser",
-      "category": "development"
+      "category": "development",
+      "healthPath": "/",
+      "startupTime": 5,
+      "minRam": 64,
+      "minCores": 1,
+      "diskSpace": 20,
+      "requires": [],
+      "needsRoot": false,
+      "privilegedDocker": false,
+      "autoUpdateSupported": true
     },
     {
       "key": "jupyter",
@@ -36,7 +54,16 @@
       "pathPrefix": "/jupyter",
       "stripPrefix": false,
       "systemd": "vcs-cc-jupyter",
-      "category": "development"
+      "category": "development",
+      "healthPath": "/jupyter/api",
+      "startupTime": 15,
+      "minRam": 512,
+      "minCores": 2,
+      "diskSpace": 500,
+      "requires": [],
+      "needsRoot": false,
+      "privilegedDocker": false,
+      "autoUpdateSupported": true
     },
     {
       "key": "gitea",
@@ -48,7 +75,16 @@
       "pathPrefix": "/git",
       "stripPrefix": true,
       "systemd": "vcs-cc-gitea",
-      "category": "development"
+      "category": "development",
+      "healthPath": "/api/healthz",
+      "startupTime": 15,
+      "minRam": 256,
+      "minCores": 1,
+      "diskSpace": 200,
+      "requires": [],
+      "needsRoot": false,
+      "privilegedDocker": false,
+      "autoUpdateSupported": true
     },
     {
       "key": "pgweb",
@@ -60,7 +96,16 @@
       "pathPrefix": "/pgweb",
       "stripPrefix": true,
       "systemd": "pgweb",
-      "category": "database"
+      "category": "database",
+      "healthPath": "/",
+      "startupTime": 5,
+      "minRam": 128,
+      "minCores": 1,
+      "diskSpace": 20,
+      "requires": [],
+      "needsRoot": false,
+      "privilegedDocker": false,
+      "autoUpdateSupported": true
     },
     {
       "key": "glances",
@@ -72,7 +117,16 @@
       "pathPrefix": "/glances",
       "stripPrefix": true,
       "systemd": "glances",
-      "category": "monitoring"
+      "category": "monitoring",
+      "healthPath": "/api/status",
+      "startupTime": 10,
+      "minRam": 128,
+      "minCores": 1,
+      "diskSpace": 50,
+      "requires": [],
+      "needsRoot": false,
+      "privilegedDocker": false,
+      "autoUpdateSupported": true
     },
     {
       "key": "claude-cli",
@@ -84,7 +138,16 @@
       "pathPrefix": "/claude",
       "stripPrefix": true,
       "systemd": "vcs-cc-claude",
-      "category": "ai"
+      "category": "ai",
+      "healthPath": "/",
+      "startupTime": 10,
+      "minRam": 256,
+      "minCores": 1,
+      "diskSpace": 100,
+      "requires": [],
+      "needsRoot": true,
+      "privilegedDocker": false,
+      "autoUpdateSupported": true
     },
     {
       "key": "browserless",
@@ -96,7 +159,16 @@
       "pathPrefix": "/browser",
       "stripPrefix": true,
       "systemd": "vcs-cc-browser",
-      "category": "development"
+      "category": "development",
+      "healthPath": "/",
+      "startupTime": 20,
+      "minRam": 1024,
+      "minCores": 2,
+      "diskSpace": 2000,
+      "requires": ["docker"],
+      "needsRoot": false,
+      "privilegedDocker": false,
+      "autoUpdateSupported": true
     },
     {
       "key": "portainer",
@@ -108,7 +180,16 @@
       "pathPrefix": "/portainer",
       "stripPrefix": true,
       "systemd": "vcs-cc-portainer",
-      "category": "infrastructure"
+      "category": "infrastructure",
+      "healthPath": "/",
+      "startupTime": 15,
+      "minRam": 256,
+      "minCores": 1,
+      "diskSpace": 500,
+      "requires": ["docker"],
+      "needsRoot": false,
+      "privilegedDocker": true,
+      "autoUpdateSupported": true
     },
     {
       "key": "comfyui",
@@ -120,7 +201,16 @@
       "pathPrefix": "/comfyui",
       "stripPrefix": true,
       "systemd": "vcs-cc-comfyui",
-      "category": "ai"
+      "category": "ai",
+      "healthPath": "/",
+      "startupTime": 60,
+      "minRam": 4096,
+      "minCores": 4,
+      "diskSpace": 10000,
+      "requires": ["docker"],
+      "needsRoot": false,
+      "privilegedDocker": false,
+      "autoUpdateSupported": true
     },
     {
       "key": "wan2",
@@ -132,7 +222,16 @@
       "pathPrefix": "/wan2",
       "stripPrefix": true,
       "systemd": "vcs-cc-wan2",
-      "category": "ai"
+      "category": "ai",
+      "healthPath": "/",
+      "startupTime": 120,
+      "minRam": 8192,
+      "minCores": 4,
+      "diskSpace": 20000,
+      "requires": ["docker"],
+      "needsRoot": false,
+      "privilegedDocker": false,
+      "autoUpdateSupported": true
     },
     {
       "key": "ollama",
@@ -144,7 +243,16 @@
       "pathPrefix": "/ollama",
       "stripPrefix": true,
       "systemd": "ollama",
-      "category": "ai"
+      "category": "ai",
+      "healthPath": "/api/tags",
+      "startupTime": 15,
+      "minRam": 4096,
+      "minCores": 2,
+      "diskSpace": 5000,
+      "requires": [],
+      "needsRoot": false,
+      "privilegedDocker": false,
+      "autoUpdateSupported": true
     },
     {
       "key": "open-webui",
@@ -156,7 +264,16 @@
       "pathPrefix": "/ai",
       "stripPrefix": true,
       "systemd": "vcs-cc-openwebui",
-      "category": "ai"
+      "category": "ai",
+      "healthPath": "/health",
+      "startupTime": 30,
+      "minRam": 512,
+      "minCores": 1,
+      "diskSpace": 2000,
+      "requires": ["docker"],
+      "needsRoot": false,
+      "privilegedDocker": false,
+      "autoUpdateSupported": true
     },
     {
       "key": "container-guard",
@@ -169,6 +286,16 @@
       "stripPrefix": false,
       "systemd": "vcs-container-guard-ui",
       "category": "security",
+      "healthPath": "/guard",
+      "startupTime": 15,
+      "minRam": 256,
+      "minCores": 1,
+      "diskSpace": 500,
+      "requires": ["docker"],
+      "needsRoot": true,
+      "privilegedDocker": false,
+      "autoUpdateSupported": true,
+      "updateCheck": "https://api.github.com/repos/00peter0/vcs-container-guard/releases/latest",
       "source": "github:00peter0/vcs-container-guard"
     },
     {
@@ -182,6 +309,15 @@
       "stripPrefix": false,
       "systemd": "vcs-cc-metabase",
       "category": "database",
+      "healthPath": "/api/health",
+      "startupTime": 120,
+      "minRam": 1536,
+      "minCores": 2,
+      "diskSpace": 2000,
+      "requires": ["docker"],
+      "needsRoot": false,
+      "privilegedDocker": false,
+      "autoUpdateSupported": true,
       "source": "docker:metabase/metabase"
     }
   ]
