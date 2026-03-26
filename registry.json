@@ -172,17 +172,17 @@
       "source": "github:00peter0/vcs-container-guard"
     },
     {
-  "key": "metabase",
-  "label": "Metabase",
-  "description": "Business intelligence & data visualization",
-  "icon": "bar-chart",
-  "version": "latest",
-  "port": 4001,
-  "pathPrefix": "/metabase",
-  "stripPrefix": false,
-  "systemd": "vcs-cc-metabase",
-  "category": "database",
-  "source": "docker:metabase/metabase"
+      "key": "metabase",
+      "label": "Metabase",
+      "description": "Business intelligence & data visualization",
+      "icon": "bar-chart",
+      "version": "latest",
+      "port": 4001,
+      "pathPrefix": "/metabase",
+      "stripPrefix": false,
+      "systemd": "vcs-cc-metabase",
+      "category": "database",
+      "source": "docker:metabase/metabase"
     }
   ]
 }
