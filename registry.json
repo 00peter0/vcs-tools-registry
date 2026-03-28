@@ -302,7 +302,7 @@
   "key": "grafana",
   "label": "Grafana",
   "description": "Analytics & dashboards",
-  "icon": "📊",
+  "icon": "📈",
   "version": "latest",
   "port": 3001,
   "pathPrefix": "/grafana",
