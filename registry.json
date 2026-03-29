@@ -176,7 +176,7 @@
       "description": "Docker container management UI",
       "icon": "🐳",
       "version": "2.21.0",
-      "port": 9443,
+      "port": 9001,
       "pathPrefix": "/portainer",
       "stripPrefix": true,
       "systemd": "vcs-cc-portainer",
