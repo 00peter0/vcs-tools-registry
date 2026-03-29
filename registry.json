@@ -255,27 +255,6 @@
       "autoUpdateSupported": true
     },
     {
-      "key": "open-webui",
-      "label": "AI Chat",
-      "description": "Web UI for local and cloud AI models",
-      "icon": "💬",
-      "version": "latest",
-      "port": 8080,
-      "pathPrefix": "/ai",
-      "stripPrefix": true,
-      "systemd": "vcs-cc-openwebui",
-      "category": "ai",
-      "healthPath": "/health",
-      "startupTime": 30,
-      "minRam": 512,
-      "minCores": 1,
-      "diskSpace": 2000,
-      "requires": ["docker"],
-      "needsRoot": false,
-      "privilegedDocker": false,
-      "autoUpdateSupported": true
-    },
-    {
       "key": "container-guard",
       "label": "Container Guard",
       "description": "Docker container security scanner & manager",
