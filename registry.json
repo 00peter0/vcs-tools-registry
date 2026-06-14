@@ -165,7 +165,9 @@
       "minRam": 1024,
       "minCores": 2,
       "diskSpace": 2000,
-      "requires": ["docker"],
+      "requires": [
+        "docker"
+      ],
       "needsRoot": false,
       "privilegedDocker": false,
       "autoUpdateSupported": true
@@ -186,7 +188,9 @@
       "minRam": 256,
       "minCores": 1,
       "diskSpace": 500,
-      "requires": ["docker"],
+      "requires": [
+        "docker"
+      ],
       "needsRoot": false,
       "privilegedDocker": true,
       "autoUpdateSupported": true
@@ -207,7 +211,9 @@
       "minRam": 4096,
       "minCores": 4,
       "diskSpace": 10000,
-      "requires": ["docker"],
+      "requires": [
+        "docker"
+      ],
       "needsRoot": false,
       "privilegedDocker": false,
       "autoUpdateSupported": true
@@ -228,7 +234,9 @@
       "minRam": 8192,
       "minCores": 4,
       "diskSpace": 20000,
-      "requires": ["docker"],
+      "requires": [
+        "docker"
+      ],
       "needsRoot": false,
       "privilegedDocker": false,
       "autoUpdateSupported": true
@@ -255,49 +263,26 @@
       "autoUpdateSupported": true
     },
     {
-      "key": "container-guard",
-      "label": "Container Guard",
-      "description": "Docker container security scanner & manager",
-      "icon": "🛡️",
-      "version": "1.0.0",
-      "port": 4000,
-      "pathPrefix": "/guard",
+      "key": "grafana",
+      "label": "Grafana",
+      "description": "Analytics & dashboards",
+      "icon": "📈",
+      "version": "latest",
+      "port": 3001,
+      "pathPrefix": "/grafana",
       "stripPrefix": false,
-      "systemd": "vcs-container-guard-ui",
-      "category": "security",
-      "healthPath": "/guard",
-      "startupTime": 15,
+      "systemd": "vcs-cc-grafana",
+      "category": "database",
+      "healthPath": "/grafana/api/health",
+      "startupTime": 30,
       "minRam": 256,
       "minCores": 1,
       "diskSpace": 500,
-      "requires": ["docker"],
-      "needsRoot": true,
+      "requires": [],
+      "needsRoot": false,
       "privilegedDocker": false,
       "autoUpdateSupported": true,
-      "updateCheck": "https://api.github.com/repos/00peter0/vcs-container-guard/releases/latest",
-      "source": "github:00peter0/vcs-container-guard"
-    },
-    {
-  "key": "grafana",
-  "label": "Grafana",
-  "description": "Analytics & dashboards",
-  "icon": "📈",
-  "version": "latest",
-  "port": 3001,
-  "pathPrefix": "/grafana",
-  "stripPrefix": false,
-  "systemd": "vcs-cc-grafana",
-  "category": "database",
-  "healthPath": "/grafana/api/health",
-  "startupTime": 30,
-  "minRam": 256,
-  "minCores": 1,
-  "diskSpace": 500,
-  "requires": [],
-  "needsRoot": false,
-  "privilegedDocker": false,
-  "autoUpdateSupported": true,
-  "source": "docker:grafana/grafana-oss"
+      "source": "docker:grafana/grafana-oss"
     }
   ]
 }
