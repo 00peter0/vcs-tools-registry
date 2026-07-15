@@ -1,7 +1,28 @@
 {
-  "version": "1.0.4",
-  "updated": "2026-03-28",
+  "version": "1.0.5",
+  "updated": "2026-07-15",
   "tools": [
+    {
+      "key": "nmap",
+      "label": "Nmap",
+      "description": "Explicitly installed network discovery and service inspection CLI for authorized targets",
+      "icon": "🛰️",
+      "kind": "cli",
+      "version": "7.x",
+      "port": 0,
+      "pathPrefix": "",
+      "stripPrefix": false,
+      "category": "security",
+      "healthPath": "",
+      "startupTime": 30,
+      "minRam": 64,
+      "minCores": 1,
+      "diskSpace": 35,
+      "requires": ["Authorized targets", "VPN Terminal"],
+      "needsRoot": true,
+      "privilegedDocker": false,
+      "autoUpdateSupported": false
+    },
     {
       "key": "ttyd",
       "label": "Terminal",
