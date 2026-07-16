@@ -1,5 +1,5 @@
 {
-  "version": "1.0.9",
+  "version": "1.0.10",
   "updated": "2026-07-16",
   "tools": [
     {
@@ -169,6 +169,27 @@
         "docker"
       ],
       "needsRoot": false,
+      "privilegedDocker": false,
+      "autoUpdateSupported": false
+    },
+    {
+      "key": "comfyui",
+      "label": "SwarmUI + WAN",
+      "description": "Local AI media workspace backed by an isolated, source-pinned ComfyUI engine",
+      "icon": "🎨",
+      "version": "SwarmUI 0.9.8-Beta / ComfyUI v0.28.0",
+      "port": 8188,
+      "pathPrefix": "/comfyui",
+      "stripPrefix": true,
+      "systemd": "vcs-cc-comfyui",
+      "category": "ai",
+      "healthPath": "/",
+      "startupTime": 1800,
+      "minRam": 8192,
+      "minCores": 4,
+      "diskSpace": 12000,
+      "requires": ["Python 3", "NVIDIA, AMD or CPU runtime"],
+      "needsRoot": true,
       "privilegedDocker": false,
       "autoUpdateSupported": false
     },
