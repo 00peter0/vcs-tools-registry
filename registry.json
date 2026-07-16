@@ -1,5 +1,5 @@
 {
-  "version": "1.0.8",
+  "version": "1.0.9",
   "updated": "2026-07-16",
   "tools": [
     {
@@ -154,7 +154,7 @@
       "label": "Web Browser",
       "description": "Firefox browser in the cloud",
       "icon": "🌐",
-      "version": "latest",
+      "version": "sha256:2bdbe30e355028eabb8a3a6f50a35a5d729e1de2376bc9c3c27c55fd2a7443d9",
       "port": 3200,
       "pathPrefix": "/browser",
       "stripPrefix": true,
@@ -170,53 +170,7 @@
       ],
       "needsRoot": false,
       "privilegedDocker": false,
-      "autoUpdateSupported": true
-    },
-    {
-      "key": "portainer",
-      "label": "Docker Manager",
-      "description": "Docker container management UI",
-      "icon": "🐳",
-      "version": "2.21.0",
-      "port": 9001,
-      "pathPrefix": "/portainer",
-      "stripPrefix": true,
-      "systemd": "vcs-cc-portainer",
-      "category": "infrastructure",
-      "healthPath": "/",
-      "startupTime": 15,
-      "minRam": 256,
-      "minCores": 1,
-      "diskSpace": 500,
-      "requires": [
-        "docker"
-      ],
-      "needsRoot": false,
-      "privilegedDocker": true,
-      "autoUpdateSupported": true
-    },
-    {
-      "key": "comfyui",
-      "label": "ComfyUI + WAN",
-      "description": "Unified image and WAN video workflow workspace; models may run locally or through a VCS-managed Studio GPU tunnel",
-      "icon": "🎬",
-      "version": "latest",
-      "port": 8188,
-      "pathPrefix": "/comfyui",
-      "stripPrefix": true,
-      "systemd": "vcs-cc-comfyui",
-      "category": "ai",
-      "healthPath": "/",
-      "startupTime": 240,
-      "minRam": 4096,
-      "minCores": 4,
-      "diskSpace": 10000,
-      "requires": [
-        "docker"
-      ],
-      "needsRoot": false,
-      "privilegedDocker": false,
-      "autoUpdateSupported": true
+      "autoUpdateSupported": false
     },
     {
       "key": "ollama",
@@ -238,28 +192,6 @@
       "needsRoot": false,
       "privilegedDocker": false,
       "autoUpdateSupported": true
-    },
-    {
-      "key": "grafana",
-      "label": "Grafana",
-      "description": "Analytics & dashboards",
-      "icon": "📈",
-      "version": "latest",
-      "port": 3001,
-      "pathPrefix": "/grafana",
-      "stripPrefix": false,
-      "systemd": "vcs-cc-grafana",
-      "category": "database",
-      "healthPath": "/grafana/api/health",
-      "startupTime": 30,
-      "minRam": 256,
-      "minCores": 1,
-      "diskSpace": 500,
-      "requires": [],
-      "needsRoot": false,
-      "privilegedDocker": false,
-      "autoUpdateSupported": true,
-      "source": "docker:grafana/grafana-oss"
     }
   ]
 }
