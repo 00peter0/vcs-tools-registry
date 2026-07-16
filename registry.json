@@ -1,5 +1,5 @@
 {
-  "version": "1.0.6",
+  "version": "1.0.7",
   "updated": "2026-07-16",
   "tools": [
     {
@@ -239,9 +239,9 @@
     },
     {
       "key": "comfyui",
-      "label": "ComfyUI",
-      "description": "AI image generation workflow editor",
-      "icon": "🎨",
+      "label": "ComfyUI + WAN",
+      "description": "Unified image and WAN video workflow workspace; models may run locally or through a VCS-managed Studio GPU tunnel",
+      "icon": "🎬",
       "version": "latest",
       "port": 8188,
       "pathPrefix": "/comfyui",
@@ -249,33 +249,10 @@
       "systemd": "vcs-cc-comfyui",
       "category": "ai",
       "healthPath": "/",
-      "startupTime": 60,
+      "startupTime": 240,
       "minRam": 4096,
       "minCores": 4,
       "diskSpace": 10000,
-      "requires": [
-        "docker"
-      ],
-      "needsRoot": false,
-      "privilegedDocker": false,
-      "autoUpdateSupported": true
-    },
-    {
-      "key": "wan2",
-      "label": "Wan2.1",
-      "description": "AI video generation",
-      "icon": "🎬",
-      "version": "latest",
-      "port": 7860,
-      "pathPrefix": "/wan2",
-      "stripPrefix": true,
-      "systemd": "vcs-cc-wan2",
-      "category": "ai",
-      "healthPath": "/",
-      "startupTime": 120,
-      "minRam": 8192,
-      "minCores": 4,
-      "diskSpace": 20000,
       "requires": [
         "docker"
       ],
